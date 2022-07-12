@@ -10,7 +10,7 @@ const score = document.querySelector('.score');
 const gameOver = document.querySelector('.gameOver');
 
 results.textContent = 'Lets Play!';
-score.textContent = "Player: " + playerScore + " Computer: " + computerScore + " Rounds Played: " + roundsPlayed;
+score.innerHTML = "Player: " + playerScore + "</br>Computer: " + computerScore + "</br>Rounds Played: " + roundsPlayed;
 
 
 
@@ -20,7 +20,7 @@ buttons.forEach((button) => {
             playerSelection = button.id;
             let computerSelection = computerPlay();
             results.textContent = playRound(playerSelection, computerSelection);
-            score.textContent = "Player: " + playerScore + " Computer: " + computerScore + " Rounds Played: " + roundsPlayed;
+            score.innerHTML = "Player: " + playerScore + "</br>Computer: " + computerScore + "</br>Rounds Played: " + roundsPlayed;
             playerSelection = "";
             if (roundsPlayed == 5) {
                 if (playerScore == computerScore) {
